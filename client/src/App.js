@@ -1,56 +1,27 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState } from 'react'
 import io from 'socket.io-client'
 
-const socket = io('http://localhost:8080/', { transports : ['websocket'] })
+const socket = io(
+  'http://localhost:8080/',
+  { 
+    transports : ['websocket']})
+import ChatRoom from './components/ChatRoom'
+import EnterChat from './components/EnterChat'
 
 const App = () => {
 
-  const userNumber = Math.ceil(50*Math.random())
-
-  const [message, setMessage] = useState('')
+  const userNumber = Math.ceil(9999*Math.random())
+  const [roomId, setRoomId] = useState('')
   const [name, setName] = useState('User' + userNumber)
-  const [chats, setChats] = useState([])
-
-  useEffect(() => {
-    socket.on('chat message', (msg) => {
-      if(msg)
-      {
-        setChats([...chats, msg])
-      }
-    })
-  }, )
-
-  const newMessageSent = (e) => {
-
-    e.preventDefault();
-    if (message && name) {
-      socket.emit('chat message', {'message': message, 'name': name});
-      setMessage('');
-    }
-  }
+  const [chatConnected, setChatConnected] = useState(false)
 
   return (
     <div>
-      <form>
-        <input
-          type = 'text'
-          value = {name}
-          name = 'name'
-          onChange = {({target}) => setName(target.value)}
-        />
-      </form>
-      <div>
-        {chats.map((c) => <div>{c.name}: {c.message}</div>)}
-      </div>
-      <form>
-        <input 
-          type = 'text'
-          value = {message}
-          name = 'message'
-          onChange = {({ target }) => setMessage(target.value)}
-        />
-        <button onClick = {newMessageSent}>Send</button>
-      </form>
+      {
+        !chatConnected || !socket ? 
+        <EnterChat name={name} setName={setName} setChatConnected={setChatConnected} roomId={roomId} setRoomId={setRoomId} socket={socket}/>:
+        <ChatRoom name={name} roomId={roomId}  socket={socket}/>
+      }
     </div>
   )
 

@@ -1,0 +1,16 @@
+POST http://localhost:8080/api/host HTTP/1.1
+content-type: application/json
+
+{
+    "roomId": "fgdwgerbhbf",
+    "password": "jacksfilms121"
+}
+###
+
+POST http://localhost:8080/api/join HTTP/1.1
+content-type: application/json
+
+{
+    "roomId": "fgdwgerbhbf",
+    "password": "jacksfilms121"
+}
