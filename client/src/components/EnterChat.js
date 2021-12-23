@@ -3,7 +3,7 @@ import { v4 as uuIDv4 } from 'uuid';
 import hostService from '../services/hostRoom'
 import joinService from '../services/joinRoom'
 
-const EnterChat = ({name, setName, setChatConnected, roomId, setRoomId, socket}) => 
+const EnterChat = ({name, setName, setChatConnected, roomId, setRoomId, socket, setAdmin}) => 
 {
 	const [joinState, setJoinState] = useState(0)
 
@@ -15,12 +15,13 @@ const EnterChat = ({name, setName, setChatConnected, roomId, setRoomId, socket})
 		e.preventDefault();
 		const rID = uuIDv4()
 		setRoomId(rID)
-		console.log(rID)
 		const credObject = {roomId: rID, password: password}
 		await hostService.host(credObject)
 		const newCredObject = {name: name, roomId: rID, password: password}
 		const token = await joinService.join(newCredObject)
-		socket.emit('join room', {roomId: rID, token: token, name: name})
+		
+		socket.emit('join room', {roomId: rID, token: token, name: name, adminStatus: true})
+		setAdmin(true)
 		setChatConnected(true)
 	}
 
@@ -29,7 +30,8 @@ const EnterChat = ({name, setName, setChatConnected, roomId, setRoomId, socket})
 		e.preventDefault();
 		const newCredObject = {name: name, roomId: roomId, password: password}
 		const token = await joinService.join(newCredObject)
-		socket.emit('join room', {roomId: roomId, token: token, name: name})
+		socket.emit('join room', {roomId: roomId, token: token, name: name, adminStatus: false})
+		setAdmin(false)
 		setChatConnected(true)
 	}
 
