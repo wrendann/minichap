@@ -7,9 +7,7 @@ const roomSchema = new mongoose.Schema({
     minLength: 7,
   },
   passwordHash: String,
-  users: {
-    type: Array
-  }
+  users: Array
 })
 
 roomSchema.set('toJSON', {

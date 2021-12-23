@@ -16,13 +16,12 @@ newRoomRouter.post('/', async (request, response) => {
   const room = new RoomModel({
     roomId: body.roomId,
     passwordHash,
-    users: [],
+    users: new Array(),
   })
 
   const savedRoom = await room.save()
 
   response.json(savedRoom)
 })
-
 
 module.exports = newRoomRouter
