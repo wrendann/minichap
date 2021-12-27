@@ -1,4 +1,368 @@
-#userList{
+.mainDiv{
+  font-size: 10px;
+}
+
+.minichapEnter{
+  font-size: 8em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 0.75em;
+}
+
+.minichapRoom{
+  font-size: 3.5em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  width: 20%;
+  left: 40%;
+  position: fixed;
+  background: solid;
+  top: 0.4em;
+}
+
+.minichapSub{
+  font-size: 2.25em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 2.75em;
+}
+
+.userNameForm{
+  text-align: center;
+  position: relative;
+  top: 8em;
+}
+
+.userNameBox{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 40%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.userNameWarning{
+  font-size: 1.5em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: absolute;
+  width: 40%;
+  top: 16em;
+  left: 30%;
+  border: red;
+  border-radius: 25px;
+  border-style: solid;
+}
+
+.hostJoinDiv{
+  text-align: center;
+  position: relative;
+  top: 11em;
+}
+
+.hostBtn{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.joinBtn{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.hostForm{
+  text-align: center;
+  position: relative;
+  top: 11em;
+}
+
+.joinForm{
+  text-align: center;
+  position: relative;
+  top: 11em;
+}
+
+.hostPassword{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 40%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.hostRoomBtn{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 1em;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.backHostBtn{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 1em;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.joinRoomId{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 40%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.joinPassword{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 40%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.joinRoomError{
+  font-size: 1.5em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: absolute;
+  width: 40%;
+  top: 5.25em;
+  left: 30%;
+  border: red;
+  border-radius: 25px;
+  border-style: solid;
+}
+
+.joinRoomBtn{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 1em;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.backJoinBtn{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 1em;
+  width: 20%;
+  height: 10%;
+  border-radius: 20px;
+}
+
+.roomIdDiv{
+  font-size: 2vw;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: fixed;
+  top: 10%;
+  width: 60vw;
+  left: 20vw;
+}
+
+.leaveRoomBtn{
+  font-size: 2.5em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: fixed;
+  top: 2.5em;
+  left: 80%;
+  width: 15%;
+  height: 1.5em;
+  border-radius: 20px;
+}
+
+.chatDisplayFull{
+  text-align: left;
+  position: fixed;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  top: 10em;
+  bottom: 5em;
+  width: 97.5vw;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column-reverse;
+  padding-bottom: 10px;
+}
+
+.chatDisplayPart{
+  text-align: left;
+  position: fixed;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+  top: 10em;
+  bottom: 5em;
+  width: 70vw;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-bottom: 10px;
+}
+
+.chatMsg{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: left;
+  position: relative;
+  top: 0.4em;
+}
+
+.chatJoin{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: left;
+  position: relative;
+  top: 0.4em;
+}
+
+.chatLeave{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: left;
+  position: relative;
+  top: 0.4em;
+}
+
+.chatKick{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: left;
+  position: relative;
+  top: 0.4em;
+}
+
+.chatBoxForm{
+  text-align: left;
+  position: fixed;
+  bottom: 3px;
+  left: 0px;
+  width: 100%;
+  height: 4em;
+  margin-bottom: 0px;
+}
+
+.chatBox{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: left;
+  position: relative;
+  width: 75vw;
+  border-radius: 20px;
+  bottom: 3px;
+}
+
+.sendMsgBtn{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 20vw;
+  border-radius: 20px;
+  bottom: 3px;
+}
+
+.toggleListBtn{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 5%;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.userListDivClosed{
+  text-align: center;
+  position: fixed;
+  top: 10em;
+  left: 100%;
+}
+
+.userListDivOpen{
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  top: 10em;
+  left: 72%;
+  height: 77%;
+  width: 22.5%;
+  overflow-y: auto;
+  margin: 5px;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.userListHead{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 0.4em;
+}
+
+.userDiv{
+  font-size: 3em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  top: 0.4em;
+}
+
+.makeAdminBtn{
+  font-size: 0.5em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 10vw;
+  border-radius: 20px;
+}
+
+.kickUserBtn{
+  font-size: 0.5em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  text-align: center;
+  position: relative;
+  width: 10vw;
+  border-radius: 20px;
+}
+
+.endCredits{
+  font-size: 2.25em;
+  font-family: "Berlin Sans FB", "Times New Roman", monospace;
+  width: 80%;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  bottom: 10px;
 }
