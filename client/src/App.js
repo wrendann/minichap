@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import io from 'socket.io-client'
 
 const socket = io(
@@ -18,9 +18,13 @@ const App = () => {
   const [chatConnected, setChatConnected] = useState(false)
   const [admin, setAdmin] = useState(false)
 
+  useEffect(() => {
+    document.title = 'minichap'
+  }, [])
+
   return (
-    <div>
-    <h2>minichap</h2>
+    <div className='mainDiv'>
+    <div className={chatConnected? 'minichapRoom' : 'minichapEnter'}>minichap</div>
       {
         !chatConnected || !socket ? 
         <EnterChat name={name} setName={setName} setChatConnected={setChatConnected} roomId={roomId} setRoomId={setRoomId} socket={socket} setAdmin={setAdmin}/>:
