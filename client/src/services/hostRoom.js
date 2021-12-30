@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = 'http://localhost:8080/api/host'
+const baseUrl = 'https://pure-cliffs-62315.herokuapp.com/api/host'
 
 const host = async (credentials) => {
     const response = await axios.post(baseUrl, credentials)

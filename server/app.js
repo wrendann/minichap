@@ -10,7 +10,6 @@ const mongoose = require('mongoose')
 console.log('connecting to', process.env.MONGODB_URI)
 
 app.use(cors({
-    origin: 'http://localhost:3000',
     credentials: true,
   }))
 

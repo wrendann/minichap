@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import io from 'socket.io-client'
 
 const socket = io(
-  'http://localhost:8080/',
+  'https://pure-cliffs-62315.herokuapp.com/',
   { 
     transports : ['websocket'],
     'sync disconnect on unload' : true,
