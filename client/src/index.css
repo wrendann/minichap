@@ -315,7 +315,8 @@
   z-index: 1;
   top: 10em;
   left: 72%;
-  height: 77%;
+  height: auto;
+  bottom: 5em;
   width: 22.5%;
   overflow-y: auto;
   margin: 5px;
@@ -379,6 +380,10 @@
   .makeAdminBtn{border-radius: 5px;}
   .kickUserBtn{border-radius: 5px;}
   .btnSVG{width: 16px; height: 16px; position: relative; right: 6px;}
+  .userNameWarning{top: 17.15em;}
+  .joinRoomError{top: auto;}
+  .userListDivOpen{width: auto; left: 0em; right: 0em;}
+  .chatDisplayPart{width: 0em;}
 }
 
 @media only screen and (max-height: 220px)
